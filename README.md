@@ -1,2 +1,2 @@
-# bday-greet
+# Birthday Greeting
 For my dad
