@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Greeting</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="balloons">
+      <div class="balloon red"></div>
+      <div class="balloon blue"></div>
+      <div class="balloon yellow"></div>
+      <div class="balloon purple"></div>
+      <div class="balloon green"></div>
+    </div>
+
+    <div class="hero">
+      <h1 class="birthday-text">
+        <span id="b1" style="color: violet">H</span>
+        <span id="b2" style="color: rgb(240, 89, 84)">A</span>
+        <span id="b3" style="color: rgb(240, 117, 46)">P</span>
+        <span id="b4" style="color: rgb(151, 241, 106)">P</span>
+        <span id="b5" style="color: rgb(104, 218, 238)">Y</span>
+        <span id="b6" style="color: rgb(157, 130, 238)">B</span>
+        <span id="b7" style="color: rgb(239, 100, 156)">I</span>
+        <span id="b8" style="color: violet">R</span>
+        <span id="b9" style="color: rgb(240, 89, 84)">T</span>
+        <span id="b10" style="color: rgb(240, 117, 46)">H</span>
+        <span id="b11" style="color: rgb(151, 241, 106)">D</span>
+        <span id="b12" style="color: rgb(104, 218, 238)">A</span>
+        <span id="b13" style="color: rgb(157, 130, 238)">Y</span>
+      </h1>
+    </div>
+
+    <div class="cake-section">
+      <img src="/asset/cake.png" id="cake" alt="Birthday Cake" />
+      <img src="/asset/candle.png" id="candle" alt="Candle" />
+      <img src="/asset/flame.png" id="candle-flame" alt="Flame" />
+      <button id="blowCandleBtn">Blow Out Candle</button>
+    </div>
+    <audio id="bdaySong" src="/asset/song.mp3"></audio>
+
+    <div class="card-section">
+      <button id="openCardBtn">💌 Open Card</button>
+    </div>
+
+    <div id="greeting-card">
+      <div class="card-content">
+        <h2>Happy Birthday, Appa! 🎉</h2>
+        <p>
+          Wishing you a day filled with love, laughter, and all the happiness
+          you deserve. Thank you for being the most amazing dad. Your love and
+          support mean the world to me. Here's to another wonderful year ahead!
+        </p>
+        <p>
+          With all my love ❤️<br />
+          Joel
+        </p>
+        <button id="closeCardBtn">Close</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

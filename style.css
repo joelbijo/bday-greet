@@ -1,0 +1,338 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.balloons {
+  position: fixed;
+  inset: 0; /* top:0 left:0 bottom:0 right:0 */
+  pointer-events: none;
+  z-index: 0;
+}
+.balloon {
+  position: absolute;
+  width: 40px;
+  height: 55px;
+  border-radius: 50% 50% 45% 45%;
+  animation: floatUp 10s infinite ease-in-out;
+}
+.balloon::before {
+  /*string*/
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 1px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.3);
+  transform: translateX(-50%);
+}
+.balloon::after {
+  /*knot*/
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background: inherit; /*same bg as balloon*/
+  transform: translateX(-50%) rotate(45deg); /*rotate for diamond shape*/
+}
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120px);
+    opacity: 0;
+  }
+}
+.red {
+  background: #ff7675;
+  left: 10%;
+  animation-duration: 12s;
+}
+
+.blue {
+  background: #74b9ff;
+  left: 30%;
+  animation-duration: 10s;
+}
+
+.yellow {
+  background: #ffeaa7;
+  left: 50%;
+  animation-duration: 14s;
+}
+
+.purple {
+  background: #a29bfe;
+  left: 70%;
+  animation-duration: 11s;
+}
+
+.green {
+  background: #55efc4;
+  left: 85%;
+  animation-duration: 13s;
+}
+.hero {
+  margin-top: 40px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.birthday-text {
+  font-size: 3em;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+.birthday-text span {
+  display: inline-block;
+  animation: bounce 3s infinite;
+}
+
+#b1 {
+  animation-delay: 0s;
+}
+#b2 {
+  animation-delay: 0.1s;
+}
+#b3 {
+  animation-delay: 0.2s;
+}
+#b4 {
+  animation-delay: 0.3s;
+}
+#b5 {
+  animation-delay: 0.4s;
+}
+#b6 {
+  animation-delay: 0.5s;
+}
+#b7 {
+  animation-delay: 0.6s;
+}
+#b8 {
+  animation-delay: 0.7s;
+}
+#b9 {
+  animation-delay: 0.8s;
+}
+#b10 {
+  animation-delay: 0.9s;
+}
+#b11 {
+  animation-delay: 1s;
+}
+#b12 {
+  animation-delay: 1.1s;
+}
+#b13 {
+  animation-delay: 1.2s;
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.cake-section {
+  position: relative;
+  width: 300px;
+  margin: 150px auto 40px;
+  text-align: center;
+}
+
+#cake {
+  width: 100%;
+  display: block;
+}
+
+#candle {
+  position: absolute;
+  top: -20%;
+  left: 47%;
+  transform: translateX(-50%);
+  width: 25px;
+  z-index: 2;
+}
+
+#candle-flame {
+  position: absolute;
+  top: -25%;
+  left: 47%;
+  transform: translateX(-50%);
+  width: 20px;
+  z-index: 3;
+  animation: flicker 0.3s infinite alternate;
+  transition: opacity 0.5s ease;
+}
+
+#candle-flame.hidden {
+  opacity: 0;
+  animation: none;
+  pointer-events: none;
+}
+
+@keyframes flicker {
+  0% {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+#blowCandleBtn {
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+#blowCandleBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+#blowCandleBtn:active {
+  transform: translateY(0);
+}
+
+.card-section {
+  position: fixed;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+#openCardBtn {
+  padding: 15px 35px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+#openCardBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+#greeting-card {
+  position: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5; /* has to be highest value compared to other z-index values*/
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+#greeting-card.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.card-content {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.5s ease;
+  position: relative;
+}
+
+@keyframes slideIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.card-content h2 {
+  color: #667eea;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.card-content p {
+  color: #333;
+  line-height: 1.8;
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+#closeCardBtn {
+  padding: 10px 25px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#closeCardBtn:hover {
+  background: #764ba2;
+}
+
+@media (max-width: 768px) {
+  /*for standard screen-size responsiveness*/
+  .birthday-text {
+    font-size: 2em;
+    letter-spacing: 2px;
+  }
+
+  .card-section {
+    position: static;
+    transform: none;
+    margin-top: 40px;
+  }
+
+  .card-content {
+    margin: 20px;
+    padding: 30px;
+  }
+}
