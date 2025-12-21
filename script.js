@@ -1,8 +1,3 @@
-//Play bday song on window load
-window.addEventListener("load", function () {
-  const song = document.getElementById("bdaySong");
-});
-
 //Blow out candle
 const blow = document.getElementById("blowCandleBtn");
 const flame = document.getElementById("candle-flame");
