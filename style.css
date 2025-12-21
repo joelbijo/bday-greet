@@ -227,15 +227,4 @@ body {
     font-size: 2em;
     letter-spacing: 2px;
   }
-
-  .card-section {
-    position: static;
-    transform: none;
-    margin-top: 40px;
-  }
-
-  .card-content {
-    margin: 20px;
-    padding: 30px;
-  }
 }
